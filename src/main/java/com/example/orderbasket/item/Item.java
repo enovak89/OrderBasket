@@ -1,11 +1,11 @@
-package com.example.orderbasket.basket;
+package com.example.orderbasket.item;
 
 import java.util.Objects;
 
-public class Basket {
+public class Item {
     private int id;
 
-    public Basket(int id) {
+    public Item(int id) {
         this.id = id;
     }
 
@@ -21,8 +21,8 @@ public class Basket {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Basket basket = (Basket) o;
-        return id == basket.id;
+        Item item = (Item) o;
+        return id == item.id;
     }
 
     @Override
@@ -30,5 +30,10 @@ public class Basket {
         return Objects.hash(id);
     }
 
-
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                '}';
+    }
 }
