@@ -7,10 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @RestController
 @RequestMapping("/order")
@@ -22,14 +19,12 @@ public class BasketController {
     }
 
     @GetMapping("/add")
-    public Set<Integer> addItemInBasket(@RequestParam Integer id1,
-                                     @RequestParam(required = false) Integer id2,
-                                     @RequestParam(required = false) Integer id3) {
-        return basketService.addItem(id1, id2, id3);
+    public Map<Integer, Integer> addItemInBasket(@RequestParam Set<Integer> id) {
+        return basketService.addItem(id);
     }
 
     @GetMapping("/get")
-    public Set<Integer> getItemInBasket() {
+    public Map<Integer, Integer> getItemInBasket() {
         return basketService.getItem();
     }
 }

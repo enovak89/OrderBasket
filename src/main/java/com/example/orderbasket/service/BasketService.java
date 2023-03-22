@@ -3,11 +3,12 @@ package com.example.orderbasket.service;
 import com.example.orderbasket.item.Item;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public interface BasketService {
 
-    Set<Integer> addItem(Integer id1, Integer id2, Integer id3);
+    Map<Integer, Integer> addItem(Set<Integer> id);
 
-    Set<Integer> getItem();
+    Map<Integer, Integer> getItem();
 }
