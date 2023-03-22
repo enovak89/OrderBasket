@@ -3,9 +3,9 @@ package com.example.orderbasket.item;
 import java.util.Objects;
 
 public class Item {
-    private int id;
+    private Integer id;
 
-    public Item(int id) {
+    public Item(Integer id) {
         this.id = id;
     }
 
@@ -13,7 +13,7 @@ public class Item {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
